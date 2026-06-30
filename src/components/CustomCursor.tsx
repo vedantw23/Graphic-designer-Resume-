@@ -28,11 +28,11 @@ export default function CustomCursor() {
       const target = document.elementFromPoint(mouse.current.x, mouse.current.y) as HTMLElement | null;
       hovered.current = Boolean(target?.closest(interactiveSelector));
 
-      dot.current.x += (mouse.current.x - dot.current.x) * 0.45;
-      dot.current.y += (mouse.current.y - dot.current.y) * 0.45;
-      ring.current.x += (mouse.current.x - ring.current.x) * 0.18;
-      ring.current.y += (mouse.current.y - ring.current.y) * 0.18;
-      ring.current.scale += ((hovered.current ? 2 : 1) - ring.current.scale) * 0.18;
+      dot.current.x += (mouse.current.x - dot.current.x) * 0.55;
+      dot.current.y += (mouse.current.y - dot.current.y) * 0.55;
+      ring.current.x += (mouse.current.x - ring.current.x) * 0.26;
+      ring.current.y += (mouse.current.y - ring.current.y) * 0.26;
+      ring.current.scale += ((hovered.current ? 2 : 1) - ring.current.scale) * 0.22;
 
       if (dotRef.current) {
         dotRef.current.style.transform = `translate3d(${dot.current.x - 4}px, ${dot.current.y - 4}px, 0)`;
