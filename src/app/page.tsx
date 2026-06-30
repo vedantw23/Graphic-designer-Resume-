@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <LoadingScreen />
       <Navbar />
-      <main className="flex min-h-screen flex-col overflow-hidden">
+      <main className="flex min-h-screen flex-col overflow-x-hidden pb-24 md:pb-32">
         <Hero />
         <About />
         <ProjectsShowcase />
